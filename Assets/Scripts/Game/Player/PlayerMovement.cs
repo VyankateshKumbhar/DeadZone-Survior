@@ -30,12 +30,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_movementInput != Vector2.zero)
         {
-            float angle = Mathf.Atan2(_smoothedMovementInput.y, _smoothedMovementInput.x)
-                          * Mathf.Rad2Deg   ;
-
-            _rigidbody.MoveRotation(
-                Mathf.LerpAngle(_rigidbody.rotation, angle, _rotationSpeed * Time.fixedDeltaTime)
-            );
+            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMovementInput);
+            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+            _rigidbody.MoveRotation(rotation);
         }
     }
 
