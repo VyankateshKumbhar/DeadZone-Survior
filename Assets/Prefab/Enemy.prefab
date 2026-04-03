@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3812632850644654202}
   - component: {fileID: 1406487170749633817}
   - component: {fileID: 4795079310460699359}
+  - component: {fileID: 1691946639775399520}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 70
+  m_Mass: 100
   m_LinearDrag: 10
   m_AngularDrag: 10
   m_GravityScale: 0
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _rotationSpeed: 100
+  _screenBorder: 20
 --- !u!114 &1406487170749633817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +127,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.45
+--- !u!114 &1691946639775399520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202501559013363678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0166a80736851b4a92a0ed740f8e0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &4373644490586335897
 GameObject:
   m_ObjectHideFlags: 0
