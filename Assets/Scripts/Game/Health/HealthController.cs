@@ -66,6 +66,7 @@ public class HealthController : MonoBehaviour
         {
             _currentHealth = _maximumHealth;
         }
+        OnHealthChanged.Invoke();
     }
 
 }

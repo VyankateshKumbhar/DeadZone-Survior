@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 8381860746970715404}
   - component: {fileID: 3501708578555962023}
   - component: {fileID: 5156001296226591016}
+  - component: {fileID: 836256261863057141}
+  - component: {fileID: 7152046250857322395}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -229,6 +231,30 @@ MonoBehaviour:
           m_StringArgument: onDied
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 836256261863057141}
+        m_TargetAssemblyTypeName: EnemyScoreAllocator, Assembly-CSharp
+        m_MethodName: AllocateKillScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: onDied
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7152046250857322395}
+        m_TargetAssemblyTypeName: EnemyCollectableDrop, Assembly-CSharp
+        m_MethodName: RandomlyDropCollectable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: onDied
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -247,6 +273,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162e9411d82827f4192a77e53e81e7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &836256261863057141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202501559013363678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e2cbe428d07ff42bba87f4c3ec2db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _killScore: 10
+--- !u!114 &7152046250857322395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202501559013363678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ed6fa155f51d145ab5e3c51f650408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chanceOfCollectableDrop: 0.3
 --- !u!1 &4373644490586335897
 GameObject:
   m_ObjectHideFlags: 0
